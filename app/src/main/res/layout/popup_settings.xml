@@ -29,11 +29,21 @@
             android:background="@drawable/coins_snackbar"
             android:layout_centerHorizontal="true" />
 
+        <Switch
+            android:id="@+id/switch_mode_fast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:text="Mode 'FAST'" />
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="bottom"
-            android:layout_marginBottom="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
             android:text="@string/version_1_0"
             android:textStyle="bold"
             android:textSize="20sp"
@@ -41,16 +51,17 @@
             android:textAlignment="center"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="bottom"
-            android:layout_marginBottom="15dp"
-            android:textSize="15sp"
-            android:textAlignment="center"
-            android:text="@string/developedBy"
-            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:autoLink="web"
-            android:textColorLink="#000"/>
+            android:layout_marginBottom="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/developedBy"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColorLink="#000"
+            android:textSize="15sp" />
     </RelativeLayout>
 
     <ImageView
