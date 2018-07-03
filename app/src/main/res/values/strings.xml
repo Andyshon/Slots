@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Slots</string>
+    <string name="you_won">YOU WON!</string>
+
+    <string name="version_1_0">Version 1.0</string>
+    <string name="developedBy">developed by <a href="http://natife.com/">natife.com</a></string>
+</resources>
