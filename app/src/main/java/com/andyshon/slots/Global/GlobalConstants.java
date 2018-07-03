@@ -1,5 +1,8 @@
 package com.andyshon.slots.Global;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
 import com.andyshon.slots.R;
 
 import java.util.ArrayList;
@@ -23,6 +26,7 @@ public class GlobalConstants {
     public static int _BetAmount = 5;
     public static int _Rat = 1;
     public static int _Jackpot = 100000;
+    public static boolean _IsFastMode;
 
     public static int drawable_1, drawable_2, drawable_3;
     public static String expectedCombination_1 = "", expectedCombination_2 = "", expectedCombination_3 = "";
@@ -145,7 +149,7 @@ public class GlobalConstants {
 
 
     /*
-    * todo: Рандомная установка главной комбинации в текущем раунде
+    * todo: Рандомная установка главной комбинации в текущем раунде и перетасовывание списка комбинаций
     * */
 
     public static void shuffleMainLine() {
@@ -201,5 +205,38 @@ public class GlobalConstants {
             }
         }
         return shuffledList;
+    }
+
+
+    /*
+    * todo: Сохраняем монеты игрока и значение джэкпота
+    * */
+
+    public static void saveUserPreferences (Context context) {
+        SharedPreferences myPref = context.getSharedPreferences("MyPref", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = myPref.edit();
+        editor.putInt("user_coins", GlobalConstants._UserCoins);
+        editor.putInt("jackpot", GlobalConstants._Jackpot);
+        editor.putBoolean("isFastMode", GlobalConstants._IsFastMode);
+        editor.apply();
+    }
+
+
+    /*
+    * todo: Получаем монеты игрока и значение джэкпота
+    * */
+
+    public static void loadUserPreferences (Context context) {
+        SharedPreferences myPref = context.getSharedPreferences("MyPref", Context.MODE_PRIVATE);
+
+        if(myPref.contains("user_coins")) {
+            GlobalConstants._UserCoins = myPref.getInt("user_coins", 0);
+        }
+        if(myPref.contains("jackpot")) {
+            GlobalConstants._Jackpot = myPref.getInt("jackpot", 0);
+        }
+        if (myPref.contains("isFastMode")) {
+            GlobalConstants._IsFastMode = myPref.getBoolean("isFastMode", false);
+        }
     }
 }
