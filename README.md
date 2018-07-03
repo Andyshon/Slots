@@ -1,1 +1,2 @@
 # Slots
+Simple slots game
