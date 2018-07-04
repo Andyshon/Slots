@@ -136,7 +136,7 @@ public class MainActivity extends BaseActivity implements CustomBetHighButton.mB
         GlobalConstants.combinations.set(GlobalConstants.combinations.size() - 2, GlobalConstants.expectedCombination_1);
         List<Integer> l1 = GlobalConstants.getShuffledImages(GlobalConstants.combinations);
         l1.set(GlobalConstants.combinations.size() - 2, GlobalConstants.drawable_1);
-        ListAdapter adapter1 = new ListAdapter(MainActivity.this, GlobalConstants.combinations, l1);
+        ListAdapter adapter1 = new ListAdapter(MainActivity.this, l1);
         list1.setAdapter(adapter1);
     }
 
@@ -146,7 +146,7 @@ public class MainActivity extends BaseActivity implements CustomBetHighButton.mB
         GlobalConstants.combinations.set(GlobalConstants.combinations.size() - 2, GlobalConstants.expectedCombination_2);
         List<Integer> l2 = GlobalConstants.getShuffledImages(GlobalConstants.combinations);
         l2.set(GlobalConstants.combinations.size() - 2, GlobalConstants.drawable_2);
-        final ListAdapter adapter2 = new ListAdapter(MainActivity.this, GlobalConstants.combinations, l2);
+        final ListAdapter adapter2 = new ListAdapter(MainActivity.this, l2);
         list2.setAdapter(adapter2);
     }
 
@@ -156,7 +156,7 @@ public class MainActivity extends BaseActivity implements CustomBetHighButton.mB
         GlobalConstants.combinations.set(GlobalConstants.combinations.size() - 2, GlobalConstants.expectedCombination_3);
         List<Integer> l3 = GlobalConstants.getShuffledImages(GlobalConstants.combinations);
         l3.set(GlobalConstants.combinations.size() - 2, GlobalConstants.drawable_3);
-        ListAdapter adapter3 = new ListAdapter(MainActivity.this, GlobalConstants.combinations, l3);
+        ListAdapter adapter3 = new ListAdapter(MainActivity.this, l3);
         list3.setAdapter(adapter3);
     }
 
@@ -239,7 +239,8 @@ public class MainActivity extends BaseActivity implements CustomBetHighButton.mB
         else {
             GlobalConstants._UserCoins += prize - GlobalConstants._BetAmount;
             updateUserCoins();
-            mPopupWindow.dismiss();
+            if (mPopupWindow != null)
+                mPopupWindow.dismiss();
             background_trans.setVisibility(View.GONE);
             showWinnerPopUp(prize);
         }
