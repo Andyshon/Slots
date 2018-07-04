@@ -156,7 +156,7 @@
             android:id="@+id/userCoins"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="00575"
+            android:text="950"
             android:textColor="#fff"
             android:textSize="30sp"
             android:layout_gravity="center"
