@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_custom_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+
+    <Button
+        android:id="@+id/place"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/you_won"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:gravity="bottom |center_horizontal"
+        android:paddingBottom="15dp"
+        android:background="@drawable/customshape_won"/>
+
+    <Button
+        android:id="@+id/btnCoins"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/coins_snackbar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="50"
+        android:textColor="#000"
+        android:textSize="10sp"/>
+
+</RelativeLayout>

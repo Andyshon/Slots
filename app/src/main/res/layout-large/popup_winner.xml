@@ -8,9 +8,9 @@
 
     <Button
         android:id="@+id/place"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="175dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="120dp"
         android:text="@string/you_won"
         android:textColor="#fff"
         android:textSize="20sp"
@@ -27,6 +27,6 @@
         android:layout_centerHorizontal="true"
         android:text="50"
         android:textColor="#000"
-        android:textSize="10sp"/>
+        android:textSize="18sp"/>
 
 </RelativeLayout>

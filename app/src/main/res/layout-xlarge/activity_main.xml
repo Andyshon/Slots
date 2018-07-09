@@ -1,0 +1,285 @@
+<RelativeLayout
+    android:id="@+id/MainLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".Activities.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="670dp"
+        android:scaleY="1"
+        android:scaleX="1"
+        android:gravity="center_vertical"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleY="0.9"
+            android:scaleX="0.9"
+            android:gravity="center"
+            android:layout_marginBottom="0dp"
+            android:layout_marginStart="55dp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_jackpot"/>
+            <Button
+                android:id="@+id/Jackpot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/field_jackpot"
+                android:textColor="#fcfcb0"
+                android:textSize="60sp"
+                android:text="@string/_100_000"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/board_jackpot" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/logo"/>
+
+            <RelativeLayout
+                android:id="@+id/LMiddle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/spinner_shape"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ListView
+                    android:id="@+id/list1"
+                    android:layout_width="150dp"
+                    android:layout_height="350dp"
+                    android:layout_marginStart="10dp"
+                    android:scrollbars="none"
+                    android:background="@drawable/spinner"/>
+
+                <ListView
+                    android:id="@+id/list2"
+                    android:layout_width="150dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="350dp"
+                    android:layout_toEndOf="@id/list1"
+                    android:scrollbars="none"
+                    android:background="@drawable/spinner"/>
+
+                <ListView
+                    android:id="@+id/list3"
+                    android:layout_width="150dp"
+                    android:layout_height="350dp"
+                    android:layout_toEndOf="@id/list2"
+                    android:layout_marginStart="15dp"
+                    android:scrollbars="none"
+                    android:background="@drawable/spinner"/>
+
+                <ImageView
+                    android:layout_width="480dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="170dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/spinner_line_goriz" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:scaleY="1.1"
+            android:scaleX="1.1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/combinations"
+                android:gravity="center"
+                android:textSize="32sp"
+                android:drawableBottom="@drawable/board_combinations"
+                android:drawablePadding="10dp"
+                android:textColor="#fff"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <com.andyshon.slots.CustomViews.CustomSettingsButton
+            android:id="@+id/btnSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@drawable/button_blue_small" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="-10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/coins_picture_3"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:orientation="vertical">
+        <Button
+            android:id="@+id/userCoins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_950"
+            android:textColor="#fff"
+            android:textSize="40sp"
+            android:layout_gravity="center"
+            android:background="@drawable/field_coins"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:text="@string/my_coins"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_1"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:textSize="40sp"
+            android:background="@drawable/field_lines"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:text="@string/lines"/>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp">
+
+            <Button
+                android:id="@+id/btnBet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/field_bet"
+                android:enabled="false"
+                android:text="@string/_100"
+                android:textColor="#fff"
+                android:textSize="40sp" />
+
+            <com.andyshon.slots.CustomViews.CustomBetLowButton
+                android:id="@+id/btnBetLow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_small"
+                android:gravity="center_horizontal"
+                android:paddingTop="10dp"
+                android:text="@string/minus"
+                android:textColor="#000"
+                android:textSize="37sp" />
+
+            <com.andyshon.slots.CustomViews.CustomBetHighButton
+                android:id="@+id/btnBetHigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="170dp"
+                android:background="@drawable/button_small"
+                android:gravity="center_horizontal"
+                android:paddingTop="10dp"
+                android:text="@string/plus"
+                android:textColor="#000"
+                android:textSize="37sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="75dp"
+                android:gravity="center"
+                android:text="@string/bet"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+
+        <com.andyshon.slots.CustomViews.CustomSpinButton
+            android:id="@+id/btnSpin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/button_big"
+            android:text="@string/spin"
+            android:textStyle="bold"
+            android:textSize="45sp" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/background_trans"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/customshape_background"/>
+
+</RelativeLayout>

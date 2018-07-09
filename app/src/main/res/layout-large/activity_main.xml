@@ -11,9 +11,13 @@
 
     <LinearLayout
         android:id="@+id/layout1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="70dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal">
 
@@ -36,7 +40,7 @@
                 android:background="@drawable/field_jackpot"
                 android:textColor="#fcfcb0"
                 android:textSize="30sp"
-                android:text="100,000"/>
+                android:text="@string/_100_000"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -109,16 +113,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="COMBINATIONS"
+                android:text="@string/combinations"
                 android:gravity="center"
-                android:textSize="18sp"
+                android:textSize="24sp"
                 android:textColor="#fff"
+                android:drawableBottom="@drawable/board_combinations"
+                android:drawablePadding="5dp"
                 android:layout_gravity="center"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/board_combinations" />
         </LinearLayout>
 
     </LinearLayout>
@@ -130,6 +131,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -155,8 +157,8 @@
         <Button
             android:id="@+id/userCoins"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="950"
+            android:layout_height="50dp"
+            android:text="@string/_950"
             android:textColor="#fff"
             android:textSize="30sp"
             android:layout_gravity="center"
@@ -167,7 +169,7 @@
                 android:textColor="#fff"
                 android:textSize="12sp"
                 android:layout_gravity="center"
-                android:text="MY COINS"/>
+                android:text="@string/my_coins"/>
         </LinearLayout>
 
         <LinearLayout
@@ -178,7 +180,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1"
+            android:text="@string/_1"
             android:textColor="#fff"
             android:layout_gravity="center"
             android:textSize="30sp"
@@ -189,7 +191,7 @@
                 android:textColor="#fff"
                 android:textSize="12sp"
                 android:layout_gravity="center"
-                android:text="LINES"/>
+                android:text="@string/lines"/>
         </LinearLayout>
 
 
@@ -199,25 +201,6 @@
             android:layout_height="match_parent"
             android:layout_marginStart="10dp">
 
-            <!--<Button
-                android:id="@+id/btnBetLow"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/button_small"
-                android:text="-"
-                android:textColor="#000"
-                android:textSize="40sp" />-->
-
-            <com.andyshon.slots.CustomViews.CustomBetLowButton
-                android:id="@+id/btnBetLow"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/button_small"
-                android:text="-"
-                android:gravity="bottom |center_horizontal"
-                android:textColor="#000"
-                android:textSize="37sp"/>
-
             <Button
                 android:id="@+id/btnBet"
                 android:layout_width="125dp"
@@ -225,9 +208,20 @@
                 android:background="@drawable/field_bet"
                 android:layout_marginStart="20dp"
                 android:enabled="false"
-                android:text="5"
+                android:text="@string/_100"
                 android:textColor="#fff"
                 android:textSize="30sp" />
+
+            <com.andyshon.slots.CustomViews.CustomBetLowButton
+                android:id="@+id/btnBetLow"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_small"
+                android:text="@string/minus"
+                android:gravity="center_horizontal"
+                android:layout_alignParentTop="true"
+                android:textColor="#000"
+                android:textSize="37sp"/>
 
             <com.andyshon.slots.CustomViews.CustomBetHighButton
                 android:id="@+id/btnBetHigh"
@@ -235,20 +229,10 @@
                 android:layout_height="50dp"
                 android:background="@drawable/button_small"
                 android:layout_marginStart="120dp"
-                android:text="+"
+                android:text="@string/plus"
                 android:gravity="bottom |center_horizontal"
                 android:textColor="#000"
                 android:textSize="37sp"/>
-
-            <!--<Button
-                android:id="@+id/btnBetHigh"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/button_small"
-                android:layout_marginStart="120dp"
-                android:text="+"
-                android:textColor="#000"
-                android:textSize="40sp" />-->
 
             <TextView
                 android:layout_marginTop="50dp"
@@ -259,7 +243,7 @@
                 android:textColor="#fff"
                 android:textSize="12sp"
                 android:layout_gravity="center"
-                android:text="BET"/>
+                android:text="@string/bet"/>
         </RelativeLayout>
 
 
@@ -270,18 +254,9 @@
             android:layout_gravity="end"
             android:layout_marginStart="20dp"
             android:background="@drawable/button_big"
-            android:text="SPIN!"
+            android:text="@string/spin"
+            android:textStyle="bold"
             android:textSize="25sp" />
-
-        <!--<Button
-            android:id="@+id/btnSpin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/button_big"
-            android:text="SPIN!"
-            android:textSize="25sp" />-->
 
 
     </LinearLayout>

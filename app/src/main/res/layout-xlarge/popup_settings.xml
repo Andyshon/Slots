@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="400dp"
+    android:padding="4dp"
+    android:background="@drawable/shape_settings_background">
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="400dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/shape_settings_green"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/btnCoins"
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="53dp"
+            android:background="@drawable/coins_snackbar"
+            android:layout_centerHorizontal="true" />
+
+        <Switch
+            android:id="@+id/switch_mode_fast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="100dp"
+            android:textSize="30sp"
+            android:text="Mode 'FAST'" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/version_1_0"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="#000"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/developedBy"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColorLink="#000"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/combination_5"
+        android:layout_marginTop="104dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

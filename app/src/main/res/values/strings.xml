@@ -2,6 +2,17 @@
     <string name="app_name">Slots</string>
     <string name="you_won">YOU WON!</string>
 
-    <string name="version_1_0">Version 1.0</string>
-    <string name="developedBy">developed by <a href="http://natife.com/">natife.com</a></string>
+    <string name="version_1_0">Version 1.2</string>
+    <string name="developedBy">developed by <a href="https://github.com/Andyshon/">Andyshon</a></string>
+    <string name="spin">SPIN!</string>
+    <string name="lines">LINES</string>
+    <string name="my_coins">MY COINS</string>
+    <string name="combinations">COMBINATIONS</string>
+    <string name="bet">BET</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="_1">1</string>
+    <string name="_100">100</string>
+    <string name="_950">950</string>
+    <string name="_100_000">100,000</string>
 </resources>
