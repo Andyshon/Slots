@@ -36,6 +36,9 @@ public class MainActivity extends BaseActivity implements CustomBetHighButton.mB
     private Button btnBet, btnUserCoins, btnJackpot;
     private ListView list1, list2, list3;
     private CustomSpinButton customSpinButton;
+    private CustomSettingsButton customSettingsButton;
+    private CustomBetHighButton customBetHighButton;
+    private CustomBetLowButton customBetLowButton;
     private ImageView background_trans;
     private PopupWindow mPopupWindow;
 
@@ -83,6 +86,9 @@ public class MainActivity extends BaseActivity implements CustomBetHighButton.mB
         btnJackpot = findViewById(R.id.Jackpot);
 
         customSpinButton = findViewById(R.id.btnSpin);
+        customSettingsButton = findViewById(R.id.btnSetting);
+        customBetHighButton = findViewById(R.id.btnBetHigh);
+        customBetLowButton = findViewById(R.id.btnBetLow);
 
         updateUserCoins();
         updateJackpot();
@@ -189,6 +195,9 @@ public class MainActivity extends BaseActivity implements CustomBetHighButton.mB
             public void onFinish() {
                 mPopupWindow.dismiss();
                 customSpinButton.setEnabled(true);
+                customSettingsButton.setEnabled(true);
+                customBetHighButton.setClickable(true);
+                customBetLowButton.setClickable(true);
             }
         }.start();
     }
@@ -235,6 +244,9 @@ public class MainActivity extends BaseActivity implements CustomBetHighButton.mB
             updateJackpot();
             updateUserCoins();
             customSpinButton.setEnabled(true);
+            customSettingsButton.setEnabled(true);
+            customBetHighButton.setClickable(true);
+            customBetLowButton.setClickable(true);
         }
         else {
             GlobalConstants._UserCoins += prize - GlobalConstants._BetAmount;
@@ -278,9 +290,11 @@ public class MainActivity extends BaseActivity implements CustomBetHighButton.mB
 
     @Override
     public void onBetHigh() {
-        if (GlobalConstants._BetAmount <= 95) {
-            GlobalConstants._BetAmount += 5;
-            btnBet.setText(String.valueOf(GlobalConstants._BetAmount));
+        if (customBetHighButton.isClickable()) {
+            if (GlobalConstants._BetAmount <= 95) {
+                GlobalConstants._BetAmount += 5;
+                btnBet.setText(String.valueOf(GlobalConstants._BetAmount));
+            }
         }
     }
 
@@ -291,9 +305,11 @@ public class MainActivity extends BaseActivity implements CustomBetHighButton.mB
 
     @Override
     public void onBetLow() {
-        if (GlobalConstants._BetAmount > 5) {
-            GlobalConstants._BetAmount -= 5;
-            btnBet.setText(String.valueOf(GlobalConstants._BetAmount));
+        if (customBetLowButton.isClickable()) {
+            if (GlobalConstants._BetAmount > 5) {
+                GlobalConstants._BetAmount -= 5;
+                btnBet.setText(String.valueOf(GlobalConstants._BetAmount));
+            }
         }
     }
 
@@ -480,7 +496,11 @@ public class MainActivity extends BaseActivity implements CustomBetHighButton.mB
     @Override
     public void onSpin() {
         updateRat();
+
         customSpinButton.setEnabled(false);
+        customSettingsButton.setEnabled(false);
+        customBetHighButton.setClickable(false);
+        customBetLowButton.setClickable(false);
         setAdapters(GlobalConstants._IsFastMode);
 
         if (GlobalConstants._IsFastMode)
