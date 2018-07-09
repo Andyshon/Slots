@@ -33,13 +33,13 @@ public class GlobalConstants {
 
     private static String[] combinations_arr = new String[3];
 
-    public static List<String> combinations = Arrays.asList("combination_1", "combination_1", "combination_1", "combination_1",
-            "combination_2", "combination_2", "combination_2", "combination_2",
-            "combination_3", "combination_3", "combination_3", "combination_3",
-            "combination_4", "combination_4", "combination_4", "combination_4",
-            "combination_5", "combination_5", "combination_5", "combination_5",
-            "combination_6", "combination_6", "combination_6", "combination_6",
-            "combination_7", "combination_7", "combination_7", "combination_7"
+    public static List<String> combinations = Arrays.asList("c_1", "c_1", "c_1", "c_1",
+            "c_2", "c_2", "c_2", "c_2",
+            "c_3", "c_3", "c_3", "c_3",
+            "c_4", "c_4", "c_4", "c_4",
+            "c_5", "c_5", "c_5", "c_5",
+            "c_6", "c_6", "c_6", "c_6",
+            "c_7", "c_7", "c_7", "c_7"
     );
 
 
@@ -81,49 +81,49 @@ public class GlobalConstants {
 
     private static boolean isPrizeCombination_1() {
         for (String comb : combinations_arr) {
-            if (!comb.equals("combination_1"))
+            if (!comb.equals("c_1"))
                 return false;
         }
         return true;
     }
     private static boolean isPrizeCombination_2 () {
         for (String comb : combinations_arr) {
-            if (!comb.equals("combination_2"))
+            if (!comb.equals("c_2"))
                 return false;
         }
         return true;
     }
     private static boolean isPrizeCombination_3 () {
         for (String comb : combinations_arr) {
-            if (!comb.equals("combination_3"))
+            if (!comb.equals("c_3"))
                 return false;
         }
         return true;
     }
     private static boolean isPrizeCombination_4 () {
         for (String comb : combinations_arr) {
-            if (!comb.equals("combination_4"))
+            if (!comb.equals("c_4"))
                 return false;
         }
         return true;
     }
     private static boolean isPrizeCombination_5 () {
         for (String comb : combinations_arr) {
-            if (!comb.equals("combination_5"))
+            if (!comb.equals("c_5"))
                 return false;
         }
         return true;
     }
     private static boolean isPrizeCombination_6 () {
         for (String comb : combinations_arr) {
-            if (!comb.equals("combination_6"))
+            if (!comb.equals("c_6"))
                 return false;
         }
         return true;
     }
     private static boolean isPrizeCombination_7 () {
         for (String comb : combinations_arr) {
-            if (!comb.equals("combination_7"))
+            if (!comb.equals("c_7"))
                 return false;
         }
         return true;
@@ -131,7 +131,7 @@ public class GlobalConstants {
     private static boolean isPrizeCombination_7_one () {
         int counter=0;
         for (String comb : combinations_arr) {
-            if (!comb.equals("combination_7")) {
+            if (!comb.equals("c_7")) {
                 counter++;
             }
         }
@@ -140,7 +140,7 @@ public class GlobalConstants {
     private static boolean isPrizeCombination_7_two () {
         int counter=0;
         for (String comb : combinations_arr) {
-            if (!comb.equals("combination_7")) {
+            if (!comb.equals("c_7")) {
                 counter++;
             }
         }
@@ -182,25 +182,25 @@ public class GlobalConstants {
     public static List<Integer> getShuffledImages(List<String> combinations) {
         List<Integer> shuffledList = new ArrayList<>();
         for (int i=0; i<combinations.size(); i++) {
-            if (combinations.get(i).equals("combination_1")) {
+            if (combinations.get(i).equals("c_1")) {
                 shuffledList.add(R.drawable.combination_1);
             }
-            else if (combinations.get(i).equals("combination_2")) {
+            else if (combinations.get(i).equals("c_2")) {
                 shuffledList.add(R.drawable.combination_2);
             }
-            else if (combinations.get(i).equals("combination_3")) {
+            else if (combinations.get(i).equals("c_3")) {
                 shuffledList.add(R.drawable.combination_3);
             }
-            else if (combinations.get(i).equals("combination_4")) {
+            else if (combinations.get(i).equals("c_4")) {
                 shuffledList.add(R.drawable.combination_4);
             }
-            else if (combinations.get(i).equals("combination_5")) {
+            else if (combinations.get(i).equals("c_5")) {
                 shuffledList.add(R.drawable.combination_5);
             }
-            else if (combinations.get(i).equals("combination_6")) {
+            else if (combinations.get(i).equals("c_6")) {
                 shuffledList.add(R.drawable.combination_6);
             }
-            else if (combinations.get(i).equals("combination_7")) {
+            else if (combinations.get(i).equals("c_7")) {
                 shuffledList.add(R.drawable.combination_7);
             }
         }
